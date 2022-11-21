@@ -117,7 +117,7 @@ const generatorHTMLTemplateForOpenCardCat = (cat) =>
     </div>
   </div>`;
 
-const api = new API("http://sb-cats.herokuapp.com/api/2/sergey-levagin");
+const api = new API("https://sb-cats.herokuapp.com/api/2/sergey-levagin");
 
 //генереруем card
 api.getAllCats().then((responseData) =>
