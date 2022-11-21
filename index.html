@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/f2c5221ad1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div><h1>InstaCats</h1></div>
+        <div>
+          <button data-open_model class="header__button" type="button">
+            добавить кота
+          </button>
+        </div>
+      </div>
+    </header>
+    <div data-cont class="container"></div>
+    <div data-models_wr class="modalsWr hidden">
+      <div data-model_form class="form_add hidden">
+        <div>
+          <button data-action="closed" type="button">Закрыть</button>
+        </div>
+        <h3>Добавление кота</h3>
+        <form name="add_cat">
+          <input required placeholder="Введите id" type="number" name="id" />
+          <input placeholder="Возраст кота" type="number" name="age" />
+          <input required placeholder="Имя кота" type="text" name="name" />
+          <input placeholder="Ретинг" name="rate" type="text" id="text" />
+          <input
+            type="range"
+            id="slider"
+            min="1"
+            max="10"
+            step="1"
+            onchange="showSliderValue()"
+          />
+          <input placeholder="Описание" type="text" name="description" />
+          <div>
+            Ващ кот фаворит?
+            <input
+              placeholder="Фаворит"
+              type="checkbox"
+              name="favourite"
+              id="input_favourite"
+            />
+            <label for="input_favourite">Да</label>
+          </div>
+          <input placeholder="Ссылка на фото" type="text" name="img_link" />
+
+          <div>
+            <input
+              name="guruweba_example_submit"
+              type="submit"
+              value="Добавить кота"
+            />
+          </div>
+        </form>
+      </div>
+
+      <div data-model_formChange class="form_change hidden">
+        <div>
+          <button data-action="closed_change" type="button">Закрыть</button>
+        </div>
+        <h3>Редактирование кота</h3>
+        <form action="" data-form_change name="change_cat">
+          <input
+            id="id_cat"
+            placeholder="id cat"
+            type="number"
+            name="id"
+            readonly
+          />
+          <input
+            id="age"
+            placeholder="Возраст кота"
+            type="number"
+            name="age"
+          /><input
+            id="name_change"
+            placeholder="Имя кота"
+            type="text"
+            name="name"
+            readonly
+          />
+          <input
+            id="rate_text"
+            placeholder="Ретинг"
+            name="rate"
+            type="text"
+          /><input
+            type="range"
+            id="slider_change"
+            min="1"
+            max="10"
+            step="1"
+            onchange="SliderValueChange()"
+          /><input
+            id="description"
+            placeholder="Описание"
+            type="text"
+            name="description"
+          />
+          <div>
+            Ващ кот фаворит?
+            <input
+              placeholder="Фаворит"
+              type="checkbox"
+              name="favourite"
+              id="favourite"
+            /><label for="input_favourite">Да</label>
+          </div>
+          <input
+            id="img_link"
+            placeholder="Ссылка на фото"
+            type="text"
+            name="img_link"
+          />
+          <div>
+            <input name="change_submit" type="submit" value="Изменить" />
+          </div>
+        </form>
+      </div>
+      <div data-action_open class="open hidden"></div>
+    </div>
+  </body>
+</html>
