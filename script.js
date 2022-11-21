@@ -120,14 +120,17 @@ const generatorHTMLTemplateForOpenCardCat = (cat) =>
 const api = new API("https://sb-cats.herokuapp.com/api/2/sergey-levagin");
 
 //генереруем card
-api.getAllCats().then((responseData) =>
-  responseData.data.forEach((cat) => {
-    return $cont.insertAdjacentHTML(
-      "beforeend",
-      generatorHTMLTemplateForCat(cat)
-    );
-  })
-);
+api
+  .getAllCats()
+  .then((responseData) =>
+    responseData.data.forEach((cat) => {
+      return $cont.insertAdjacentHTML(
+        "beforeend",
+        generatorHTMLTemplateForCat(cat)
+      );
+    })
+  )
+  .catch(alert);
 
 function likes(element) {
   if (element.favourite) {
